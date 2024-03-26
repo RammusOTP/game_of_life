@@ -1,5 +1,4 @@
 from test_funcs import *
-from colours import *
 
 
 def run_tests():
