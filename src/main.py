@@ -5,7 +5,6 @@ import colours
 from funcs import update
 
 
-
 def main():
     pygame.init()
     screen = pygame.display.set_mode((800, 600))
@@ -42,6 +41,7 @@ def main():
             pygame.display.update()
 
         time.sleep(0.1)
+
 
 if __name__ == '__main__':
     main()
