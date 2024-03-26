@@ -4,6 +4,17 @@ import pygame
 
 
 def update(screen, cells, size, with_progress=False):
+    """
+    Update the cells of the Conway's Game of Life simulation based on the rules of the game.
+
+    :param screen: The Pygame surface to draw the cells onto.
+    :param cells: A NumPy array representing the current state of the cells in the grid.
+    :param size: The size of each cell in pixels.
+    :param with_progress: A boolean indicating whether to visualize the progression of cell states.
+                          Defaults to False.
+
+    :return: A NumPy array representing the updated state of the cells after applying the rules of the game.
+    """
     updated_cells = np.zeros((cells.shape[0], cells.shape[1]), dtype=int)
 
     for row, col in np.ndindex(cells.shape):

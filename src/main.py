@@ -6,6 +6,14 @@ from funcs import update
 
 
 def main():
+    """
+    Run the Conway's Game of Life simulation.
+    1 - Initializes the pygame window
+    2 - Sets up the initial state of the cells grid
+    3 - Enters the main game loop where events are processed and the simulation is updated accordingly.
+
+    :return: None
+    """
     pygame.init()
     screen = pygame.display.set_mode((800, 600))
 
