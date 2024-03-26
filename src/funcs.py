@@ -2,12 +2,13 @@ import colours
 import numpy as np
 import pygame
 
+
 def update(screen, cells, size, with_progress=False):
-    updated_cells = np.zeros((cells.shape[0], cells.shape[1]))
+    updated_cells = np.zeros((cells.shape[0], cells.shape[1]), dtype=int)
 
     for row, col in np.ndindex(cells.shape):
         alive = np.sum(cells[row - 1: row + 2, col - 1: col + 2]) - cells[row, col]
-        colour = colours.BG if cells[row, col] > 0 else colours.ALIVE_NEXT
+        colour = colours.ALIVE_NEXT if cells[row, col] > 0 else colours.BG
         if cells[row, col] == 1:
             if alive < 2 or alive > 3:
                 if with_progress:
